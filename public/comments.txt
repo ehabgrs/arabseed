@@ -1,0 +1,118 @@
+#
+- we just put the index in public folder of the server
+- so we reset inside the index file the sysyem and application path by adding '../' before
+
+#
+- set the development and production enviroment in index file
+
+#
+- we set the config database into two files
+- we created two folders production and development folders
+- we put each file of the database inside each folders
+- we setup each database file 
+
+#
+- create our cms_config file inside the config folders
+- add this cms_config file into config autoload inside the autoload file in the config folder
+
+#
+- set autoload libraries inside autoload file by adding database
+#
+- we create our own controller MY_Controller inside core folder
+- this controller extends CI_Controller
+- then we will extends our controllers from MY_Controller that already extends CI_Controller
+- create inside MY_Controller an array for data where we will add any data for it that we want to send for the view
+- add errors array inside data array to recieve the errors
+
+#
+- we create a two controllers inside libraries folder
+- one for admin and one for frontend
+- to autoload those controllers from the libraries file, we will override autolaod by our own autoload function inside the config file
+
+
+#
+- we will activate migration class by open migration file inside config and set it true , change version to '1',
+- we set the use of files of $config['migration_type'] = 'sequential' startt from 1
+- create folder at the app path , where we will put the migration files 
+- create the first file 001.name.php
+
+#
+- create a controller to control the migration extends Admin_Controller ,inside the admin folder inside the controllers 
+- load migration
+- then open the link of the controller , and the database code will run
+- after run the first folder we change the version to 2 to run file 002 and go on
+- if we changed the version to down number for example 1 and we run the controller , it will drop all the tables we added in file 002 
+- it will return just for what happend at the number of the version we called and delete all what happened after
+
+ #
+ - create our own model inside core folder called MY_Model extends CI_Model
+ - then we will extends the models from MY_Model
+ - we create the common functions that will be common between the models inside MY_Model
+ 
+ #
+ - start work on the dashboard controller and then work in the views _layout_modal and _layout_main
+ - put the header and footer in separate files and then include them by load->view
+ 
+ 
+ #
+ - we will save the action view name in the data and send it to the view of the layout
+ - then inside the layout we will load the view of this action
+ - so the layout design will be fixed and just we will send the name of the subview and show it inside the layout
+ 
+ 
+ #
+ - we will load the necessary common helper and libraries that we will use at all the controllers inside the controllers we created like admin_controller 
+ 
+ #
+ - go on create the necessary models and controller and actions for our project
+ - we create the view for the page and then load it inside our _layout_main or _layout_modal
+ 
+ #
+ - will create helper file and add it in helper folder and then add it's name in the helper autload inside the autoload file.
+ 
+ #create pagination,php file inside config folder and put the common setting for pagination there and codeigniter will use it automatically
+ -remove index.php from config index_page to avoid index.php appearing in the url with using anchor, to check later if will cause problems.
+ 
+ 
+ #callback function problem need to be fixed
+ 
+ 
+ #
+ - create my_session extends CI_Session inside the libraries to fix session problem of logout by it own
+ 
+ #
+ - bring the nestesSorttable jquery library from project from github
+ - https://github.com/ilikenwf/nestedSortable
+ - add before it jquery and jquery ui
+ 
+ 
+ #
+ -then after we create the admin controllers and related views
+ -we will work with the frontend
+ 
+ 
+ #
+ - now we will change default controller from routes file inside config folder
+ - change it for page
+ 
+ #
+ -then we will create page controller 
+ 
+ #
+ - we will create a menu for all the pages with our nested data we created in admin panel
+ -add in cms_helper file we created before a function to get this data ready as html 
+ 
+ # 
+ -add template field for the pages table in the database and then we make diffrent templates depend in categories
+ 
+ #
+ - before we start with the front end we will change in routs
+ -go to route file in config folder
+ - add $route[':any'] = 'page/index/$1'; that is mean any page other than homepage will be page/index and anything after that will be just variable in the url
+ - later we changed it by removing this route and instead we changed $route['404_override'] to the controller where we will handle the pages
+ - every page not found will routed for our controller where we handle the pages
+ - we will take the segments we want and work on it
+ 
+ #
+ - change in the cofig file $config['log_threshold'] = 1; to enable php error be log error forward us to 404
+ 

@@ -1,0 +1,48 @@
+#function or way to stop the duplicate links to not accept extra segments #DONE
+
+#create function in helper to handle the messages for alert or success  #DONE
+
+# make a page to change the shows that reference for the same categoey to reference to another category togethr at one time  #DONE
+
+#change the category drop down for shows to be just for childs #DONE
+//CHECK FOR LATER IF WE NEED TO ADD for DROPDOWN THE CATEGORIES THAT HAS NO CHILDS AND HAS SHOWS DIRECTLY
+
+#restrict add episodes for show if the show doesnt set has_episodes to 1  #DONE
+
+#two functions has the same work in episode model check and delete one =>  get_episode_with_show and get_with_references_details #DONE
+
+
+#handle delete shows has episodes #DONE
+
+#work on the page meta titles 
+
+# when we order the categories , if category was child and has shows references to it directly ,and now turned to be parent after the order
+- notify the user in the order page that he has to change the reference of the shows to another child
+
+
+# check the length of the input with the rules and the database
+- add some work in the form validation by jquery
+
+#design the streaming and download in frontend
+
+#check order by pubdate in the tables
+
+#add for the image in frontend alt and title
+
+#handle tags in the form and in frontend
+
+
+#enhance send error messages if something didn`t work
+
+#enhance delete the items with refrences 
+- give option to change the reference for another item or delete all   
+
+#enhance the rules of validation for the forms 
+
+#enhance 404 ERROR page
+
+
+
+
+
+ 
